@@ -80,18 +80,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // ***
-    // TODO - Task 1 - Show Store Information Activity
-    // ***
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.info:
-                Intent intent = new Intent(this, InfoActivity.class);
-                startActivity(intent);
-            return true;
+        if (item.getItemId() == R.id.info) {
+            Intent intent = new Intent(this, InfoActivity.class);
+            startActivity(intent);
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     private void addCandiesToDatabase(Candy[] candies) {
