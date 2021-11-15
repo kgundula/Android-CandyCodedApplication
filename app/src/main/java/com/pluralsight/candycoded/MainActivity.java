@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.info) {
-            Intent intent = new Intent(this, InfoActivity.class);
-            startActivity(intent);
+            Intent infoIntent  = new Intent(this, InfoActivity.class);
+            startActivity(infoIntent);
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     private void addCandiesToDatabase(Candy[] candies) {
